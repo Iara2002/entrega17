@@ -2,8 +2,8 @@ import express from "express";
 import { engine } from "express-handlebars";
 import mongoose from "mongoose";
 
-import  productRouter  from "./routes/products.routes.js";
-import  cartRouter from "./routes/carts.routes.js";
+import  productRouter  from "./routes/product.routes.js";
+import  cartRouter from "./routes/cart.routes.js";
 import  viewsRouter from "./routes/views.routes.js";
 
 
@@ -40,6 +40,6 @@ mongoose.connect(
 );
 
 
-app.use("/api/products", productRouter);
-app.use("/api/carts", cartRouter);
+app.use("/api/product", productRouter);
+app.use("/api/cart", cartRouter);
 app.use("/api/viewProducts", viewsRouter);
